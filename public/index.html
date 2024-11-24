@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Chat App</title>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col justify-center items-center">
+  <div class="w-full max-w-lg mx-auto bg-white rounded-lg shadow-lg">
+    <!-- Header -->
+    <div class="bg-blue-500 text-white p-4 rounded-t-lg text-center font-bold">
+      Local Chat App
+    </div>
+
+    <!-- Messages Section -->
+    <div id="messages" class="p-4 h-80 overflow-y-auto bg-gray-50 border-b border-gray-200 flex flex-col gap-2">
+      <!-- Messages will appear here -->
+    </div>
+
+    <!-- Message Form -->
+    <form id="message-form" class="flex p-4 bg-gray-100 gap-2">
+      <input
+        type="text"
+        id="message-input"
+        placeholder="Type a message"
+        class="flex-1 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200"
+      />
+      <button
+        type="submit"
+        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+      >
+        Send
+      </button>
+    </form>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
